@@ -39,11 +39,10 @@ const genreReport = () => {
 
 const averagePagesReport = () => {
     let pagesCount = library.map(book => book.pages);
-    return Math.floor(pagesCount.reduce((sum, current) => (sum + current) / pagesCount.length));
+    return Math.floor(pagesCount.reduce((sum, current) => sum + current) / pagesCount.length);
 };
 
+console.log(`Среднее количество страниц: ${averagePagesReport()}`);
 //Создайте функцию, которая выводит список всех книг, отсортированный по году издания, от новых к старым.
 
 const sortByYear = () => library.sort((a, b) => b.published - a.published);
-
-console.log(sortByYear());
