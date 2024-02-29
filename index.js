@@ -44,6 +44,6 @@ const averagePagesReport = () => {
 
 //Создайте функцию, которая выводит список всех книг, отсортированный по году издания, от новых к старым.
 
-const sortByYear = () => library.sort((a, b) => a.published - b.published);
+const sortByYear = () => library.sort((a, b) => b.published - a.published);
 
 console.log(sortByYear());
